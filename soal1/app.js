@@ -6,8 +6,10 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-// const karyawan = require('./routes/perusahaan');
+const karyawanRouter = require('./routes/karyawan');
 const perusahaanRouter = require('./routes/perusahaan');
+const transaksiRouter = require('./routes/transaksi');
+const axiosRouter = require('./routes/axios');
 
 const app = express();
 
@@ -24,6 +26,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/perusahaan', perusahaanRouter);
+app.use('/karyawan', karyawanRouter);
+app.use('/transaksi', transaksiRouter);
+app.use('/axios', axiosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

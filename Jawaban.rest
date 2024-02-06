@@ -116,7 +116,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/mutasi
+GET http://localhost:3000/transaksi/print
 Content-Type: application/json
 
 {

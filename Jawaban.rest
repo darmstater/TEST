@@ -114,6 +114,14 @@ Content-Type: application/json
     "penerima_id" : 1,
     "jumlah_transfer" : 10
 }
+
+###
+GET http://localhost:3000/mutasi
+Content-Type: application/json
+
+{
+}
+
 ##########################################################################################
 
 

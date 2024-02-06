@@ -1,4 +1,4 @@
-const Perusahaan = require('./Perusahaan');
+// const Perusahaan = require('./Perusahaan');
 
 module.exports = (sequelize, DataTypes) => {
     const Karyawan = sequelize.define("Karyawan",
@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         { tableName: "karyawan", timestamps: false}
     );
-    Karyawan.belongsTo(Perusahaan); // Assuming a Karyawan belongs to one Perusahaan
+    // Karyawan.belongsTo(Perusahaan); // Assuming a Karyawan belongs to one Perusahaan
   
     return Karyawan;
 };

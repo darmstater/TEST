@@ -10,6 +10,8 @@ const karyawanRouter = require('./routes/karyawan');
 const perusahaanRouter = require('./routes/perusahaan');
 const transaksiRouter = require('./routes/transaksi');
 const axiosRouter = require('./routes/axios');
+const uploadRouter = require('./routes/upload');
+
 
 const app = express();
 
@@ -29,6 +31,9 @@ app.use('/perusahaan', perusahaanRouter);
 app.use('/karyawan', karyawanRouter);
 app.use('/transaksi', transaksiRouter);
 app.use('/axios', axiosRouter);
+app.use('/upload', uploadRouter);
+app.use('/assets', express.static('assets'))
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

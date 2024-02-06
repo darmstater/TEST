@@ -5,7 +5,7 @@ const { createKaryawan,getKaryawan,updateKaryawan,deleteKaryawan } = require('./
 
 router.post("/create", createKaryawan);
 router.use("/read", getKaryawan);
-router.post("/update", updateKaryawan);
-router.post("/delete", deleteKaryawan);
+router.put("/update/:id", updateKaryawan);
+router.delete("/delete/:id", deleteKaryawan);
 
 module.exports = router;

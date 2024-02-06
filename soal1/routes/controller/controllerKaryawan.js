@@ -114,7 +114,7 @@ module.exports = {
       }
 
       await existingKaryawan.update({ deleted_at: new Date() });
-
+      // await existingKaryawan.destroy()
       return res.json({
         status: 'Success!',
         data: {

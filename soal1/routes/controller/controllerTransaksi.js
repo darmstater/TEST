@@ -17,7 +17,7 @@ module.exports = {
       const penerima = await Penerima.findByPk(penerima_id, { transaction: transaksi });
       penerima.saldo += jumlah_transfer;
       await penerima.save({ transaction: transaksi });
-
+ 
       // Mencatat transaksi di tabel mutasi
       await Mutasi.create(
         {

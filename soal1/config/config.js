@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+const path = require("path");
 const { DB_DATABASE, DB_USERNAME, DB_PASSWORD, DB_HOST } = process.env;
 
 module.exports = {
@@ -24,4 +24,5 @@ module.exports = {
     host: DB_HOST,
     dialect: "mysql",
   },
+  rootPath: path.resolve(__dirname, ".."),
 };

@@ -110,13 +110,10 @@ Content-Type: application/json
 
 ##########################################################################################
 //6. Implementasikan transaksi di MySQL menggunakan Node.js, di mana dua query atau lebih akan dieksekusi secara transaksional.
-POST http://localhost:3000/transaksi
+POST http://localhost:3000/soal5
 Content-Type: application/json
 
 {
-    "pengirim_id" : 4,
-    "penerima_id" : 1,
-    "jumlah_transfer" : 10
 }
 ##########################################################################################
 

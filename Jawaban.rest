@@ -96,24 +96,23 @@ Content-Type: application/json
 
 ##########################################################################################
 //5. Tuliskan query SQL untuk mengambil semua data dari dua tabel yang berbeda dengan melakukan join berdasarkan kolom tertentu.
-GET http://localhost:3000/posts
+GET http://localhost:3000/soal5
 Content-Type: application/json
 
 {
-    {
-    "keterangan" : "albert",
-    "filepdf" : "albert.pdf",
-    "filefoto" : "cvalbert.jpg"
 }
 
 
 
 ##########################################################################################
 //6. Implementasikan transaksi di MySQL menggunakan Node.js, di mana dua query atau lebih akan dieksekusi secara transaksional.
-POST http://localhost:3000/soal5
+POST http://localhost:3000/transaksi
 Content-Type: application/json
 
 {
+    "pengirim_id" : 4,
+    "penerima_id" : 1,
+    "jumlah_transfer" : 10
 }
 ##########################################################################################
 

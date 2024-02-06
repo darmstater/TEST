@@ -12,8 +12,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
               },
               jenis_kelamin: {
-                type: DataTypes.STRING,
-                values: ["Laki-laki", "Perempuan"],
+                type: DataTypes.ENUM('Laki-laki', 'Perempuan'),
                 allowNull: false,
               },
               email: {
@@ -37,7 +36,9 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: true,
               },
         },
-        { tableName: "karyawan", timestamps: false, paranoid: true}
+        { tableName: "karyawan", timestamps: false}
     );   
+    // Karyawan.belongsTo(sequelize.models.Perusahaan, { foreignKey: 'perusahaan_id' });
+  
     return Karyawan;
 };

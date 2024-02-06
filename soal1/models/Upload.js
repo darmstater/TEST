@@ -19,8 +19,18 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
+            createdAt: {
+              field: "created_at", // adjust the field name if necessary
+              type: DataTypes.DATE,
+              allowNull: false,
+            },
+            updatedAt: {
+              field: "updated_at", // adjust the field name if necessary
+              type: DataTypes.DATE,
+              allowNull: false,
+            },
         },
-        { tableName: "uploadfile", timestamps: true, paranoid: true}
+        { tableName: "upload", timestamps: true, paranoid: true}
     );
     return Upload;
 };

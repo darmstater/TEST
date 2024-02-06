@@ -11,7 +11,7 @@ const perusahaanRouter = require('./routes/perusahaan');
 const transaksiRouter = require('./routes/transaksi');
 const axiosRouter = require('./routes/axios');
 const uploadRouter = require('./routes/upload');
-
+const soal5Router = require('./routes/soal5');
 
 const app = express();
 
@@ -32,6 +32,7 @@ app.use('/karyawan', karyawanRouter);
 app.use('/transaksi', transaksiRouter);
 app.use('/axios', axiosRouter);
 app.use('/upload', uploadRouter);
+app.use('/soal5', soal5Router);
 app.use('/assets', express.static('assets'))
 
 

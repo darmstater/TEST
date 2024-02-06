@@ -29,5 +29,6 @@ module.exports = (sequelize , DataTypes) => {
         },
         { tableName: "perusahaan", timestamps: true, paranoid: true}    
     );
+    Perusahaan.hasMany(Karyawan);
     return Perusahaan;
 };

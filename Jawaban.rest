@@ -27,7 +27,37 @@ Content-Type: application/json
 ##########################################################################################
 //2. Buatlah middleware Express.js untuk mengecek keberadaan token JWT pada setiaprequest dan memberikan akses hanya kepada pengguna yang memiliki token yangvalid.
 
+//KETIKKAN NAMA USER UNTUK DAPAT TOKEN
+POST http://localhost:4000/login
+Content-Type: application/json
 
+{
+  "username": "Baskoro"
+}
+###
+//MASUKKAN TOKEN JADI TERLIHAT USERNAME SI PEMILIK TOKEN
+GET http://localhost:5000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQmFza29ybyIsImlhdCI6MTcwNzIwMDk5NiwiZXhwIjoxNzA3MjAxMDExfQ.RkIQtNV3EYHIfQUVnruzfHOsBRs99n_9Pu2EjqwV9p4
+
+###
+//SETELAH DI DELETE TOKEN JUGA HILANG
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQmFza29ybyIsImlhdCI6MTcwNzIwMDc5NiwiZXhwIjoxNzA3MjAwODExfQ.Pd5etBEnfmUz7mzkzqMUVg5RZLnT7tf_BzHPmSKhzlE"
+}
+
+###
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQmFza29ybyIsImlhdCI6MTcwNzIwMDc5NiwiZXhwIjoxNzA3MjAwODExfQ.Pd5etBEnfmUz7mzkzqMUVg5RZLnT7tf_BzHPmSKhzlE"
+}
+
+###
+###
 ##########################################################################################
 //3. Buat sebuah fungsi asinkron dengan menggunakan async/await untuk mengambil data dari API eksternal menggunakan Node.js axios.
 GET http://localhost:3000/axios
